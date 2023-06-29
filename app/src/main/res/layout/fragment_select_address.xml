@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/Space8x"
+    tools:context=".ui.payment.change_address.SelectAddressFragment">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:text="add Address"
+        app:icon="@drawable/ic_round_add"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/Space5x"
+        />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_add_address"
+            tools:itemCount="2"
+            tools:listitem="@layout/item_selected_address" />
+
+
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:text="Proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

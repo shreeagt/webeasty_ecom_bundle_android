@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="add"
+            type="com.nide.tecom.data.model.AddressModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/Space8x"
+        >
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:divider="@drawable/space_devider"
+                app:showDividers="middle"
+                >
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="Contact" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:text="@{add.name}"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textStyle="bold"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:prefixText="+91"
+                    app:prefixTextColor="@color/black"
+                    app:prefixTextAppearance="?attr/textAppearanceSubtitle2"
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:text="@{add.mobile}"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textStyle="bold"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:layout_marginTop="@dimen/Space20x"
+                    android:text="Address" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pin code"
+                        android:inputType="number"
+                        android:text="@{add.pin}"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textStyle="bold"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ti_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:text="@{add.address}"
+                        android:textAppearance="?attr/textAppearanceSubtitle2"
+                        android:textStyle="bold"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ti_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="@dimen/Space2x"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="city"
+                            android:text="@{add.city}"
+                            android:textAppearance="?attr/textAppearanceSubtitle2"
+                            android:textStyle="bold"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/ti_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_marginHorizontal="@dimen/Space2x"
+                        >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="State"
+                            android:text="@{add.state}"
+                            android:textAppearance="?attr/textAppearanceSubtitle2"
+                            android:textStyle="bold"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/is_default"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Set as default address"
+                    android:textStyle="bold"
+                    />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="58dp"
+                    android:text="update &amp; continue"
+                    app:icon="@drawable/ic_round_arrow_forward"
+                    app:iconGravity="textEnd" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/address_navigation"
+    app:startDestination="@id/saveAddressFragment">
+
+    <fragment
+        android:id="@+id/saveAddressFragment"
+        android:name="com.nide.tecom.ui.address.save.SaveAddressFragment"
+        android:label="My Address" >
+        <action
+            android:id="@+id/action_saveAddressFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment" />
+        <action
+            android:id="@+id/action_saveAddressFragment_to_editAddressFragment"
+            app:destination="@id/editAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.nide.tecom.ui.address.add.AddAddressFragment"
+        android:label="Save Address"
+        tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/editAddressFragment"
+        android:name="com.nide.tecom.ui.address.edit.EditAddressFragment"
+        android:label="EditAddressFragment" >
+        <argument
+            android:name="address"
+            app:argType="string" />
+    </fragment>
+</navigation>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_nav"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.nide.tecom.ui.search.query.SearchFragment"
+        android:label="What are you looking for ?" >
+        <action
+            android:id="@+id/action_searchFragment_to_searchProductFragment"
+            app:destination="@id/searchProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchProductFragment"
+        android:name="com.nide.tecom.ui.search.result.SearchProductFragment"
+        android:label="fragment_search_product"
+        tools:layout="@layout/fragment_search_product" >
+        <argument
+            android:name="query"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.nide.tecom.ui.favorite.FavoriteFragment"
+        android:label="Wishlist" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.nide.tecom.ui.cart.CartFragment"
+        android:label="Cart" />
+    <fragment
+        android:id="@+id/productDetailsFragment"
+        android:name="com.nide.tecom.ui.productDetails.details.ProductDetailsFragment"
+        android:label="ProductDetailsFragment" />
+</navigation>

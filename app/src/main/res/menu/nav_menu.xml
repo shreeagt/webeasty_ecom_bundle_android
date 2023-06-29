@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:title="Home"
+        android:icon="@drawable/bxs_home"
+        />
+    <item
+        android:id="@+id/categoryFragment"
+        android:title="Category"
+        android:icon="@drawable/bxs_category"
+        />
+
+    <item
+        android:id="@+id/cartFragment"
+        android:title="Order"
+        android:icon="@drawable/bxs_shopping_bag"
+        />
+    <item
+        android:id="@+id/accountFragment"
+        android:title="Account"
+        android:icon="@drawable/bxs_user"
+        />
+
+
+
+
+
+
+</menu>

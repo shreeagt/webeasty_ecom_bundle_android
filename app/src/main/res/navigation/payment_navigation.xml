@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/payment_navigation"
+    app:startDestination="@id/checkoutFragment">
+
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.nide.tecom.ui.payment.checkout.CheckoutFragment"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_checkout" >
+        <action
+            android:id="@+id/action_checkoutFragment_to_selectAddressFragment"
+            app:destination="@id/selectAddressFragment" />
+        <action
+            android:id="@+id/action_checkoutFragment_to_addAddressFragment2"
+            app:destination="@id/addAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectAddressFragment"
+        android:name="com.nide.tecom.ui.payment.change_address.SelectAddressFragment"
+        android:label="Select Address" >
+        <action
+            android:id="@+id/action_selectAddressFragment_to_addAddressFragment"
+            app:destination="@id/addAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddressFragment"
+        android:name="com.nide.tecom.ui.address.add.AddAddressFragment"
+        android:label="Add Address" />
+</navigation>

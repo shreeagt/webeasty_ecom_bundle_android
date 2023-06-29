@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/Space8x"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView6"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:src="@drawable/shirt"
+            app:strokeWidth="2dp"
+            android:layout_marginStart="@dimen/Space5x"
+            app:strokeColor="@color/pink"
+            app:shapeAppearanceOverlay="@style/CircleImage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginStart="@dimen/Space12x"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:textStyle="bold"
+                android:textSize="@dimen/FontSize8x"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change Picture"
+            app:strokeColor="@color/gray_yellow"
+            app:strokeWidth="1dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:textSize="@dimen/FontSize4x"
+            android:layout_marginTop="@dimen/Space8x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Save Details"
+            android:minHeight="58dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

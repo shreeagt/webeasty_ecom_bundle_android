@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.search.SearchActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="hay, what are you looking for ?"
+            app:titleTextAppearance="?attr/textAppearanceBody1"
+            app:navigationIcon="@drawable/ic_round_arrow_back"
+            >
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:searchIcon="@drawable/ic_bx_search"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search here"
+            android:layout_marginHorizontal="@dimen/Space4x"
+            android:layout_marginBottom="@dimen/Space4x"
+            android:background="@drawable/search_underline_background"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/search_nav"
+        tools:layout="@layout/fragment_search" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

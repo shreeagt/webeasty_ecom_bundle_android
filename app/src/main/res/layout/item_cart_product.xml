@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cart"
+            type="com.nide.tecom.data.model.CartItemModel" />
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/Space5x"
+        android:layout_marginVertical="@dimen/Space2x"
+        app:cardCornerRadius="10dp"
+        app:strokeWidth="0dp"
+        app:cardElevation="@dimen/Space2x"
+        app:contentPadding="@dimen/Space5x">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_product_image"
+                android:layout_width="60dp"
+                android:layout_height="70dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/shirt" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/Space5x"
+                android:ellipsize="end"
+                android:maxLines="2"
+                tools:text="Red T-shirt ,half slave "
+                android:text="@{cart.title}"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_product_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_background"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/Space2x"
+                android:showDividers="middle"
+                android:divider="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:srcCompat="@drawable/ic_round_remove" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_qnt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/Space5x"
+                    tools:text="02"
+                    android:text="@{String.valueOf(cart.quantity)}"
+                    />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:srcCompat="@drawable/ic_round_add" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/Space5x"
+                tools:text="₹599"
+                android:text="@{String.valueOf(cart.price)}"
+                android:textAppearance="?attr/textAppearanceSubtitle2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_product_image" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

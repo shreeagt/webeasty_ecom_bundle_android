@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/Space8x"
+    tools:context=".ui.payment.checkout.CheckoutFragment">
+
+    <TextView
+        android:id="@+id/tv_shipping_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipping Address"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:padding="0dp"
+        android:text="Change"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:icon="@drawable/baseline_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_change">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_add_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="Debashis Halder"
+            android:textAppearance="?attr/textAppearanceSubtitle2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Subhasgram chanditala park, kolkata , westbengal,700149"
+            android:textAppearance="?attr/textAppearanceBody2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_add_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="9836742862"
+            android:textAppearance="?attr/textAppearanceBody2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price Details"
+        android:textAppearance="?attr/textAppearanceSubtitle2"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/Space14x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_address" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/price_with_item"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="₹799"
+            android:textAppearance="?attr/textAppearanceBody2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_discount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_discount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Discount"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/yellow"
+            android:text="₹799"
+            android:textAppearance="?attr/textAppearanceBody2" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_shipping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_discount">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_shipping_fee_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Shipping"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_shipping_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="Free Delivery"
+            android:textColor="@color/yellow"
+            android:textAppearance="?attr/textAppearanceBody2" />
+    </LinearLayout>
+
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/div_total_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_shipping" />
+
+    <LinearLayout
+        android:id="@+id/ll_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/div_total_up">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_total_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Total"
+            android:textStyle="bold"
+            android:textAppearance="?attr/textAppearanceBody1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="₹988"
+            android:textStyle="bold"
+            android:textAppearance="?attr/textAppearanceBody2" />
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_total" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_confirm"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:text="@string/confirm_place_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

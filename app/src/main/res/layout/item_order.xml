@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/Space6x">
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="66dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="8dp"
+            android:padding="@dimen/Space5x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order"
+            app:srcCompat="@drawable/shirt" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_order"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Order ID - "
+            android:textAppearance="?attr/textAppearanceCaption"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_order_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="OD1242sfsdf34234"
+            android:textAppearance="?attr/textAppearanceCaption"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_amount"
+            app:layout_constraintStart_toEndOf="@+id/tv_order"
+            app:layout_constraintTop_toTopOf="@+id/tv_order" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/Space6x"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Name Of The Product"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_order_id" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="qnt : "
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_qun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/Space2x"
+            android:text="2"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintStart_toEndOf="@+id/textView15"
+            app:layout_constraintTop_toBottomOf="@+id/tv_product_name" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tracking id : "
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="sdfjksjlaslkfjasldfkj4234234"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+            app:layout_constraintEnd_toStartOf="@+id/imageView11"
+            app:layout_constraintStart_toEndOf="@+id/textView17"
+            app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_exp_delivery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Expected Delevary date 12 Sep, 2023"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_image"
+            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹ 299"
+            android:textAppearance="?attr/textAppearanceBody2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/textView18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView18"
+            app:srcCompat="@drawable/content_copy" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nov 15,2023"
+            android:textAppearance="?attr/textAppearanceBody2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount Payable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/Space8x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_exp_delivery" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/track"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="imageView11,textView17,textView18"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
